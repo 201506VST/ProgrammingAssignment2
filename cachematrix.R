@@ -1,4 +1,4 @@
-## Solution to R Assginement 2
+## Solution to R Assignement 2
 ## Objective of assignment: to write a pair of functions that cache the inverse of a matrix
 ## with:
 ## function 1: "makeCacheMatrix" - to create a special "matrix" object that can cache its inverse
