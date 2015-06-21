@@ -1,4 +1,4 @@
-## Solution to R Assinement 2
+## Solution to R Assginement 2
 ## Objective of assignment: to write a pair of functions that cache the inverse of a matrix
 ## with:
 ## function 1: "makeCacheMatrix" - to create a special "matrix" object that can cache its inverse
@@ -9,12 +9,12 @@
 ## Solution fuction 1 - "makeCacheMatrix"
 
 makeCacheMatrix <- function(x = matrix()) { ## creates matrix object x
-    a <- NULL       ## define the cache a
+    a <- NULL                  ## define the cache a
     set <- function(y) {
-        x <<- y     ## assign the input matrix y to the variable x in the parent environment
-        a <<- NULL  ## re-initialize a in the parent environment to null
+        x <<- y                ## assign the input matrix y to the variable x in the parent environment
+        a <<- NULL             ## re-initialize a in the parent environment to null
     }
-    get <- function() x ## return the matrix x
+    get <- function() x        ## return the matrix x
     setinverse <- function(inv) a <<- inv ## set the cache a equal to the inverse of the matrix x
     getinverse <- function() a ## return the cached inverse of x
     list(set = set,get = get,
@@ -34,9 +34,9 @@ makeCacheMatrix <- function(x = matrix()) { ## creates matrix object x
 
 cacheSolve <- function(x, ...) {
     a <- x$getinverse()
-    if(!is.null(a)) {  ## checks to see if the cached date a is filled, if yes 
+    if(!is.null(a)) {          ## checks to see if the cached date a is filled, if yes 
         message("getting cached data") ## this messafe is shown and
-        return(a) ## data is retrieved from the cache a and then skips the computation
+        return(a)              ## data is retrieved from the cache a and then skips the computation
     }
     
     ## is a is NULL (no cache), then the inverse of the special "matrix" x is computed and cached in a
